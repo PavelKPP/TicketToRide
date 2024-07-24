@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+</head>
+<body>
+<h1>Welcome to Main Menu! <span th:text="${userLogin}"></span></h1>
+<h2>Your balance is: <span th:text="${userBalance}"></span></h2>
+<h3>Find the most suitable route for you: </h3>
+<form method="post" action="optimal_ticket" th:object="${optimalTicketRequest}">
+    <label th:for="departureCity">Choose departure city: </label>
+    <select name="departureCity" id="departureCity" th:field="*{departureCity}">
+        <option value="Birmingham">Birmingham</option>
+        <option value="Coventry">Coventry</option>
+        <option value="Bristol">Bristol</option>
+        <option value="Swindon">Swindon</option>
+        <option value="Northampton">Northampton</option>
+        <option value="London">London</option>
+        <option value="Reading">Reading</option>
+    </select>
+    <label th:for="arrivalCity">Choose arrival city: </label>
+    <select name="arrivalCity" id="arrivalCity" th:field="*{arrivalCity}">
+        <option value="Birmingham">Birmingham</option>
+        <option value="Coventry">Coventry</option>
+        <option value="Bristol">Bristol</option>
+        <option value="Swindon">Swindon</option>
+        <option value="Northampton">Northampton</option>
+        <option value="London">London</option>
+        <option value="Reading">Reading</option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
