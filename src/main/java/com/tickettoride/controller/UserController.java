@@ -172,7 +172,6 @@ public class UserController {
     }
 
     /**
-     * Обрабатывает POST-запрос для обработки оптимального билета.
      * Handles POST-request to process seeking of the most optimal ticket.
      *
      * @param ticketModel ticket's model, which is global per session
