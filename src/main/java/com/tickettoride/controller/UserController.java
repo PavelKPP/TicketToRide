@@ -149,7 +149,6 @@ public class UserController {
                 return "redirect:/login";
 
         }
-//        return registeredUser == null ? "error_page" : "redirect:/login";
     }
 
     /**
